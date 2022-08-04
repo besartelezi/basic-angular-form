@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {ParseTreeResult} from "@angular/compiler";
+import {Friend} from "./friend";
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,6 @@ import {ParseTreeResult} from "@angular/compiler";
 
 
 export class AppComponent {
-  languageArray = ['PHP', 'CSS', 'HTML', 'Javascript', 'C++', 'C#', 'Español', 'Java', 'Si++, the Spanish C++']
+  languageArray = ['PHP', 'CSS', 'HTML', 'Javascript', 'C++', 'C#', 'Español', 'Java', 'Si++, the Spanish C++'];
+  friend = new Friend(null, null, null, null, null);
 }
