@@ -3,6 +3,9 @@ Like almost everything in the developer world, the goal of this assignment is to
 This time, I will be learning what Angular is, what frameworks are, how to use it and hopefully, why or in what cases should I use it.
 I will learn all of the above by creating a friend book app with Angular.
 
+And just like always when doing a learning exercise, finishing the assignment won't be a top priority, but learning will be.
+So my goal is to write out all the complex stuff about Angular and frameworks in order for me to better understand that.
+
 ---
 
 ## Tuturu List
@@ -51,7 +54,6 @@ A POST request to add a friend to your friend list.
     - An amount of random friends from your list
     - A list of all the people between the age of 30 and 40
     - ...
-
 
 ### Steps
 - [x] Clone this repository locally
@@ -163,8 +165,22 @@ The main goal of frameworks is to speed up the developing process.
 And since time = money, it also saves a lot of money.
 Don't we all like money?
 
+## Components - Tearing me aPART
+The explanation given to me by one the sources cited at the bottom of the README goes as follows:
+````
+Components are the main 'building block' of Angular apps. 
+Each component consists of:
 
+* An HTML template that declares what renders on the page
+* A TypeScript class that defines behavior
+* A CSS selector that defines how the component is used in a template
+* Optionally, CSS styles applied to the template
+````
 
+To me, that is still not enough to really understand what components quite are.
+But the more I work with components, the better I should understand them.
 
 ## Sources
 * [What are frameworks?](https://www.netsolutions.com/insights/what-is-a-framework-in-programming/)
+* [Components in Angular](https://angular.io/api/core/Component#description)
+* [How to use components in Angular](https://angular.io/guide/component-overview)
