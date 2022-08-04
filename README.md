@@ -77,12 +77,12 @@ A POST request to add a friend to your friend list.
   - [x] Also add <code>#inputName="ngModel"</code> to every input tag.
   - [x] Make sure all your inputs have a name attribute and also put <code>ngModel</code> inside of each input.
   - [x] Test if it works by adding <code>{{ formName.value | json }}</code> at the top of your html. If you take a look at your page and fill in some values, you'll see them update automatically.
-- [ ] The ngModel that's added to the inputs is not complete yet. It's supposed to be used to bind the data to a model.
-  - [ ] First we need to add a new "friend" model to our project, in the root of your angular app in the terminal, run the command <code>ng generate class Friend</code>.
-  - [ ] Open the generated friend.ts file and add a constructor to the class. In there, depending on which inputs you used, add the corresponding properties. Don't forget to typehint them. Thanks typescript!
-  - [ ] In your component class, instantiate the friendModel through the friend class with all the properties set to null. To do this you'll also need to import the Friend class.
-  - [ ] Next, in your HTML, change the ngModel of your inputs to be like this: <code>[(ngModel)]="friendModel.propertyName"</code>. Of course, replace the propertyName with the corresponding name of your property.
-  - [ ] To test if this works, go back to the top of your HTML and change <code>{{ formName.value | json }}</code> to <code>{{ friendModel | json }}</code>. You'll see that at the top of your page in the browser, nothing really changed. Now your data is binded to the friend model.
+- [x] The ngModel that's added to the inputs is not complete yet. It's supposed to be used to bind the data to a model.
+  - [x] First we need to add a new "friend" model to our project, in the root of your angular app in the terminal, run the command <code>ng generate class Friend</code>.
+  - [x] Open the generated friend.ts file and add a constructor to the class. In there, depending on which inputs you used, add the corresponding properties. Don't forget to typehint them. Thanks typescript!
+  - [x] In your component class, instantiate the friendModel through the friend class with all the properties set to null. To do this you'll also need to import the Friend class.
+  - [x] Next, in your HTML, change the ngModel of your inputs to be like this: <code>[(ngModel)]="friendModel.propertyName"</code>. Of course, replace the propertyName with the corresponding name of your property.
+  - [x] To test if this works, go back to the top of your HTML and change <code>{{ formName.value | json }}</code> to <code>{{ friendModel | json }}</code>. You'll see that at the top of your page in the browser, nothing really changed. Now your data is binded to the friend model.
 - [ ] Now we need to display when a field is invalid to the user.
   - [ ] Add the required property to all inputs, this will make sure that angulars "invalid" tag gets added to the fields that are not filled in.
   - [ ] Make a class, or use a bootstrap class, that makes it clear that something is wrong with that input. For example, a red border color.
