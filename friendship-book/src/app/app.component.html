@@ -11,12 +11,26 @@
 {{ friend | json }}
 <!-- Might replace the form by an angular form -->
 <form #formName="ngForm">
-  <input type ="text" placeholder ="First name:" name="firstName" #firstName="ngModel" ngModel [(ngModel)]="friend.firstName">
-  <input type ="text" placeholder ="Last name:" name="lastName" #lastName="ngModel" ngModel [(ngModel)]="friend.lastName">
-  <input type ="text" placeholder ="Email:" name="email" #email="ngModel" ngModel [(ngModel)]="friend.email">
-  <input type ="text" placeholder ="Phone number:" name="phoneNumber" #phoneNumber="ngModel" ngModel [(ngModel)]="friend.phoneNumber">
+  <input required type ="text" placeholder ="First name:" name="firstName"
+         #firstName="ngModel" ngModel [(ngModel)]="friend.firstName"
+         [class.wrongInput]="firstName.invalid && firstName.touched"
+         pattern="[a-zA-Z ]+">
+  <input required type ="text" placeholder ="Last name:" name="lastName"
+         #lastName="ngModel" ngModel [(ngModel)]="friend.lastName"
+         [class.wrongInput]="lastName.invalid && lastName.touched"
+          pattern="[a-zA-Z ]+">
+  <input required type ="text" placeholder ="Email:" name="email"
+         #email="ngModel" ngModel [(ngModel)]="friend.email"
+         pattern='^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
+         [class.wrongInput]="email.invalid && email.touched">
+  <input required type ="text" placeholder ="Phone number:" name="phoneNumber"
+         #phoneNumber="ngModel" ngModel [(ngModel)]="friend.phoneNumber"
+         pattern="^(((\+|00)32[ ]?(?:\(0\)[ ]?)?)|0){1}(4(60|[789]\d)\/?(\s?\d{2}\.?){2}(\s?\d{2})|(\d\/?\s?\d{3}|\d{2}\/?\s?\d{2})(\.?\s?\d{2}){2})$"
+         [class.wrongInput]="phoneNumber.invalid && phoneNumber.touched">
   <label for="favouriteLanguage">My favourite language is:</label>
-  <select name="favouriteLanguage" id="favouriteLanguage" #favouriteLanguage="ngModel" ngModel [(ngModel)]="friend.favouriteLanguage">
+  <select required name="favouriteLanguage" id="favouriteLanguage"
+          #favouriteLanguage="ngModel" ngModel [(ngModel)]="friend.favouriteLanguage"
+          [class.wrongInput]="favouriteLanguage.invalid && favouriteLanguage.touched">
     <option  *ngFor="let langauge of languageArray; let i = index">
       {{ langauge }}
     </option>
