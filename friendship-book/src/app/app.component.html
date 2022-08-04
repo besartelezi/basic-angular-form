@@ -8,16 +8,16 @@
   <title>Book of my Happy Tree Friends!</title>
 </head>
 <body>
-
+{{ formName.value | json }}
 <!-- Might replace the form by an angular form -->
-<form>
-  <input type ="text" placeholder ="First name:" name="firstName">
-  <input type ="text" placeholder ="Last name:" name="lastName">
-  <input type ="text" placeholder ="Email:" name="email">
-  <input type ="text" placeholder ="Phone number:" name="phoneNumber">
+<form #formName="ngForm">
+  <input type ="text" placeholder ="First name:" name="firstName" #inputName="ngModel" ngModel>
+  <input type ="text" placeholder ="Last name:" name="lastName" #inputName="ngModel" ngModel>
+  <input type ="text" placeholder ="Email:" name="email" #inputName="ngModel" ngModel>
+  <input type ="text" placeholder ="Phone number:" name="phoneNumber" #inputName="ngModel" ngModel>
   <label for="favouriteLanguage">My favourite language is:</label>
-  <select name="favouriteLanguage" id="favouriteLanguage">
-    <option *ngFor="let langauge of languageArray; let i = index">
+  <select name="favouriteLanguage" id="favouriteLanguage" #inputName="ngModel" ngModel>
+    <option  *ngFor="let langauge of languageArray; let i = index">
       {{ langauge }}
     </option>
   </select>
