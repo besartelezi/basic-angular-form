@@ -54,23 +54,23 @@ A POST request to add a friend to your friend list.
 
 
 ### Steps
-- [ ] Clone this repository locally
-- [ ] Check if you have node.js and npm, if not, install them.
+- [x] Clone this repository locally
+- [x] Check if you have node.js and npm, if not, install them.
     - node: <code>node -v</code> or <code>node -version</code>
     - npm: <code>npm -v</code> or <code>npm -version</code>
-- [ ] Install the Angular cli with <code>npm install -g @angular/cli</code> and check afterwards if you have it with <code>ng version</code>
-- [ ] Navigate to the root of your clone of this repository in the terminal and enter the command <code>ng new project-name</code>. You should now have 2 folders called "server", your node API, and "project-name", your angular app.
-- [ ] Go inside of the "project-name" folder and run the command <code>ng serve --port 4500</code>. You can now check out your angular app on <code>localhost:4500</code>.
-  - [ ] In your editor, navigate to <code>project-name/src/app</code>. In here you'll find 2 things.
-    - [ ] The template, app.component.html
-    - [ ] The component, app.component.ts.
-    - [ ] The view you see in the page is produced by the combination of that <strong>template</strong> and the <strong>component</strong> that brings the logic to the template.
-    - [ ] You should never pay attention to .spec files, these are for unit testing which is out of scope for this exercise.
-- [ ] Empty the "AppComponent" class and the template. The template file should be completely empty. Inside of the AppComponent class you'll write your logic and in the template you can use it and write the html.
-- [ ] In the HTML file, add a form with the required inputs at least. Go take a look at the must haves to see which are required. Don't forget a submit button, make it a regular button, <strong>not an input type button</strong>!
+- [x] Install the Angular cli with <code>npm install -g @angular/cli</code> and check afterwards if you have it with <code>ng version</code>
+- [x] Navigate to the root of your clone of this repository in the terminal and enter the command <code>ng new project-name</code>. You should now have 2 folders called "server", your node API, and "project-name", your angular app.
+- [x] Go inside of the "project-name" folder and run the command <code>ng serve --port 4500</code>. You can now check out your angular app on <code>localhost:4500</code>.
+  - [x] In your editor, navigate to <code>project-name/src/app</code>. In here you'll find 2 things.
+    - [x] The template, app.component.html
+    - [x] The component, app.component.ts.
+    - [x] The view you see in the page is produced by the combination of that <strong>template</strong> and the <strong>component</strong> that brings the logic to the template.
+    - [x] You should never pay attention to .spec files, these are for unit testing which is out of scope for this exercise.
+- [x] Empty the "AppComponent" class and the template. The template file should be completely empty. Inside of the AppComponent class you'll write your logic and in the template you can use it and write the html.
+- [x] In the HTML file, add a form with the required inputs at least. Go take a look at the must haves to see which are required. Don't forget a submit button, make it a regular button, <strong>not an input type button</strong>!
 - [ ] You might have already added a select input for the languages with the options inside of it. This can be optimised by putting the names of the languages inside of an array in your component class. Next, you can use the ngFor loop to generate all the options, way more efficient right?
 - [ ] Now you will have to bind the data to your form
-  - [ ]In your app.module.ts, import the FormsModule from @angular/forms. Also add it to the imports array.
+  - [ ] In your app.module.ts, import the FormsModule from @angular/forms. Also add it to the imports array.
   - [ ] Add <code>#formName="ngForm"</code> to your form. This will make "formName" a variable which contains all the data of the form in realtime.
   - [ ] Also add <code>#inputName="ngModel"</code> to every input tag.
   - [ ] Make sure all your inputs have a name attribute and also put <code>ngModel</code> inside of each input.
@@ -144,3 +144,27 @@ A POST request to add a friend to your friend list.
 
 ---
 
+## What the ducking heck is a framework?!
+Is the slightly moderated version of the question I asked myself when we had to start working with frameworks.
+Frameworks, like the name entails, are kind of like a frame.
+Just as a house needs a framework, some projects can benefit a great deal from frameworks.
+They can be used as a guide or support for the project.
+
+More specifically, frameworks are a programming tool that provide ready-made components that developers can use to speed up development.
+Frameworks can include the following:
+* Support programs
+* Compilers
+* Code libraries
+* Toolsets
+* APIs
+* And much more!
+
+The main goal of frameworks is to speed up the developing process.
+And since time = money, it also saves a lot of money.
+Don't we all like money?
+
+
+
+
+## Sources
+* [What are frameworks?](https://www.netsolutions.com/insights/what-is-a-framework-in-programming/)
