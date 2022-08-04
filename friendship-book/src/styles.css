@@ -2,3 +2,7 @@
 .wrongInput {
   border: 1px solid red;
 }
+.errorInput {
+  color: lightcoral;
+  font-size: 12px;
+}
