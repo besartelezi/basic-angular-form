@@ -70,13 +70,13 @@ A POST request to add a friend to your friend list.
     - [x] You should never pay attention to .spec files, these are for unit testing which is out of scope for this exercise.
 - [x] Empty the "AppComponent" class and the template. The template file should be completely empty. Inside of the AppComponent class you'll write your logic and in the template you can use it and write the html.
 - [x] In the HTML file, add a form with the required inputs at least. Go take a look at the must haves to see which are required. Don't forget a submit button, make it a regular button, <strong>not an input type button</strong>!
-- [ ] You might have already added a select input for the languages with the options inside of it. This can be optimised by putting the names of the languages inside of an array in your component class. Next, you can use the ngFor loop to generate all the options, way more efficient right?
-- [ ] Now you will have to bind the data to your form
-  - [ ] In your app.module.ts, import the FormsModule from @angular/forms. Also add it to the imports array.
-  - [ ] Add <code>#formName="ngForm"</code> to your form. This will make "formName" a variable which contains all the data of the form in realtime.
-  - [ ] Also add <code>#inputName="ngModel"</code> to every input tag.
-  - [ ] Make sure all your inputs have a name attribute and also put <code>ngModel</code> inside of each input.
-  - [ ] Test if it works by adding <code>{{ formName.value | json }}</code> at the top of your html. If you take a look at your page and fill in some values, you'll see them update automatically.
+- [x] You might have already added a select input for the languages with the options inside of it. This can be optimised by putting the names of the languages inside of an array in your component class. Next, you can use the ngFor loop to generate all the options, way more efficient right?
+- [x] Now you will have to bind the data to your form
+  - [x] In your app.module.ts, import the FormsModule from @angular/forms. Also add it to the imports array.
+  - [x] Add <code>#formName="ngForm"</code> to your form. This will make "formName" a variable which contains all the data of the form in realtime.
+  - [x] Also add <code>#inputName="ngModel"</code> to every input tag.
+  - [x] Make sure all your inputs have a name attribute and also put <code>ngModel</code> inside of each input.
+  - [x] Test if it works by adding <code>{{ formName.value | json }}</code> at the top of your html. If you take a look at your page and fill in some values, you'll see them update automatically.
 - [ ] The ngModel that's added to the inputs is not complete yet. It's supposed to be used to bind the data to a model.
   - [ ] First we need to add a new "friend" model to our project, in the root of your angular app in the terminal, run the command <code>ng generate class Friend</code>.
   - [ ] Open the generated friend.ts file and add a constructor to the class. In there, depending on which inputs you used, add the corresponding properties. Don't forget to typehint them. Thanks typescript!
