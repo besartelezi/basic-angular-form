@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Book of my Happy Tree Friends!</title>
+</head>
+<body>
+
+<!-- Might replace the form by an angular form -->
+<form>
+  <input type ="text" placeholder ="First name:" name="firstName">
+  <input type ="text" placeholder ="Last name:" name="lastName">
+  <input type ="text" placeholder ="Email:" name="email">
+  <input type ="text" placeholder ="Phone number:" name="phoneNumber">
+  <label for="favouriteLanguage">My favourite language is:</label>
+  <select name="favouriteLanguage" id="favouriteLanguage">
+    <option *ngFor="let langauge of languageArray; let i = index">
+      {{ langauge }}
+    </option>
+  </select>
+  <button type ="submit" name="submitForm">Submit</button>
+</form>
+
+</body>
+</html>
