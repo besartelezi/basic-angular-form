@@ -95,7 +95,7 @@ A POST request to add a friend to your friend list.
     - [x] Have no numbers in names
     - [x] Have no letters in phone numbers
     - [x] Have no special code characters allowed anywhere if they're not needed.
-    - [ ] Further error displaying is optional. You could for example add a message below each field. After that you can give it a conditional class, based on if the field is valid / touched or not. The class will make it not display if the field is valid.
+    - [x] Further error displaying is optional. You could for example add a message below each field. After that you can give it a conditional class, based on if the field is valid / touched or not. The class will make it not display if the field is valid.
   - [x] To do this, add the pattern property to the input field and as a value add the regular expression that it would have to suffice. Go to https://regex101.com/ if you want to test out and learn more about regex.
 - [ ] If all the fields are valid, the forms valid property will also be set to valid. Let's disable the button when the form is not valid.
   - [ ] To check if the form is invalid, you'll need to use <code>formName.form.invalid</code>.
