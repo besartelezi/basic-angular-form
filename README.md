@@ -84,17 +84,19 @@ A POST request to add a friend to your friend list.
   - [x] Next, in your HTML, change the ngModel of your inputs to be like this: <code>[(ngModel)]="friendModel.propertyName"</code>. Of course, replace the propertyName with the corresponding name of your property.
   - [x] To test if this works, go back to the top of your HTML and change <code>{{ formName.value | json }}</code> to <code>{{ friendModel | json }}</code>. You'll see that at the top of your page in the browser, nothing really changed. Now your data is binded to the friend model.
 - [ ] Now we need to display when a field is invalid to the user.
-  - [ ] Add the required property to all inputs, this will make sure that angulars "invalid" tag gets added to the fields that are not filled in.
-  - [ ] Make a class, or use a bootstrap class, that makes it clear that something is wrong with that input. For example, a red border color.
-  - [ ] To conditionally add that class to your input, add <code>[class.yourClassName]="property.invalid"</code>. This means the class "yourClassName" will be applied to the input when a specific property is invalid.
-  - [ ] Now the fields that are empty, and thus invalid, will have the invalid class applied. However, we don't want this when the user hasn't even touched the input. To add this functionality, change the condition to <code>[class.yourClassName]="property.invalid && property.touched"</code>.
-  - [ ] The only way fields are invalid now, is when there's nothing in it and the user has touched the input already. However, if the user would for example put a sentence in the phone number field, we want to display it as invalid too.
-  - [ ] To do this, add the pattern property to the input field and as a value add the regular expression that it would have to suffice. Go to https://regex101.com/ if you want to test out and learn more about regex.
-  - [ ] Regex is hard and you don't have to do it perfectly, however it is manageable to
-    - [ ] Have no numbers in names
-    - [ ] Have no letters in phone numbers
-    - [ ] Have no special code characters allowed anywhere if they're not needed.
+  - [x] Add the required property to all inputs, this will make sure that angulars "invalid" tag gets added to the fields that are not filled in.
+  - [x] Make a class, or use a bootstrap class, that makes it clear that something is wrong with that input. For example, a red border color.
+  - [x] To conditionally add that class to your input, add <code>[class.yourClassName]="property.invalid"</code>. This means the class "yourClassName" will be applied to the input when a specific property is invalid.
+  - [x] Now the fields that are empty, and thus invalid, will have the invalid class applied. However, we don't want this when the user hasn't even touched the input. To add this functionality, change the condition to <code>[class.yourClassName]="property.invalid && property.touched"</code>.
+  - [x] The only way fields are invalid now, is when there's nothing in it and the user has touched the input already. However, if the user would for example put a sentence in the phone number field, we want to display it as invalid too.
+  - [x] Learn about Regex
+  - [x] Learn to make a Regex string
+  - [x] Create a Regex string that will result in that the user input will: 
+    - [x] Have no numbers in names
+    - [x] Have no letters in phone numbers
+    - [x] Have no special code characters allowed anywhere if they're not needed.
     - [ ] Further error displaying is optional. You could for example add a message below each field. After that you can give it a conditional class, based on if the field is valid / touched or not. The class will make it not display if the field is valid.
+  - [x] To do this, add the pattern property to the input field and as a value add the regular expression that it would have to suffice. Go to https://regex101.com/ if you want to test out and learn more about regex.
 - [ ] If all the fields are valid, the forms valid property will also be set to valid. Let's disable the button when the form is not valid.
   - [ ] To check if the form is invalid, you'll need to use <code>formName.form.invalid</code>.
   - [ ] You can make a conditional property again by entering <code>[property]="condition"</code> in your button. Disable the button conditionally based on the invalidity of the form.
@@ -180,7 +182,14 @@ Each component consists of:
 To me, that is still not enough to really understand what components quite are.
 But the more I work with components, the better I should understand them.
 
+## Regex
+Regex is short for '**Reg**ular **ex**pression'.
+It is a string of text that lets you create patterns that help match, locate and manage text.
+Basically, it's a piece of code that defines a pattern.
+That pattern is something you'd either like to filter in or out.
+
 ## Sources
 * [What are frameworks?](https://www.netsolutions.com/insights/what-is-a-framework-in-programming/)
 * [Components in Angular](https://angular.io/api/core/Component#description)
 * [How to use components in Angular](https://angular.io/guide/component-overview)
+* [What is regex?](https://www.computerhope.com/jargon/r/regex.htm)
