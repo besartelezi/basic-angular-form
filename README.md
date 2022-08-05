@@ -83,7 +83,7 @@ A POST request to add a friend to your friend list.
   - [x] In your component class, instantiate the friendModel through the friend class with all the properties set to null. To do this you'll also need to import the Friend class.
   - [x] Next, in your HTML, change the ngModel of your inputs to be like this: <code>[(ngModel)]="friendModel.propertyName"</code>. Of course, replace the propertyName with the corresponding name of your property.
   - [x] To test if this works, go back to the top of your HTML and change <code>{{ formName.value | json }}</code> to <code>{{ friendModel | json }}</code>. You'll see that at the top of your page in the browser, nothing really changed. Now your data is binded to the friend model.
-- [ ] Now we need to display when a field is invalid to the user.
+- [x] Now we need to display when a field is invalid to the user.
   - [x] Add the required property to all inputs, this will make sure that angulars "invalid" tag gets added to the fields that are not filled in.
   - [x] Make a class, or use a bootstrap class, that makes it clear that something is wrong with that input. For example, a red border color.
   - [x] To conditionally add that class to your input, add <code>[class.yourClassName]="property.invalid"</code>. This means the class "yourClassName" will be applied to the input when a specific property is invalid.
@@ -102,12 +102,12 @@ A POST request to add a friend to your friend list.
   - [x] You can make a conditional property again by entering <code>[property]="condition"</code> in your button. Disable the button conditionally based on the invalidity of the form.
   - [x] Now that the form validation is set up, add the "novalidate" property to your form to prevent the automatic browser validation.
   - [x] To see if your button is actually getting disabled, inspect your button HTML in the browser.
-- [ ] Let's submit the data to a server now, but before we can do that we need to be able to do something on submit and get access to http requests.
-  - [ ] If you add the ngSubmit property to your form, you can bind a function to it and use that function in your component class to trigger it on submit. This is how it looks like: <code>(ngSubmit)="yourFunction()"</code>.
-  - [ ] In your component class, define the function and console log your friend model. Now when you submit you'll see the data appear in your console.
-  - [ ] To add this friend to your friendlist server, we'll need to make a service for it. We'll use the cli for this and input the command <code>ng g s addFriend</code>. This means, a"ng"ular "g"enerate "s"ervice with name "addFriendService", when you generate a service you'll see that after the name you've given it will automatically add "Service" after it.
-  - [ ] In your newly generated addFriend.service.ts file, import the HttpClient. In your addFriend class, add a new private property called http to the constructor. Typehint it to be of type HttpClient.
-  - [ ] You'll also have to import the HttpClientModule in your app.module.ts, also add it to the imports array below.
+- [x] Let's submit the data to a server now, but before we can do that we need to be able to do something on submit and get access to http requests.
+  - [x] If you add the ngSubmit property to your form, you can bind a function to it and use that function in your component class to trigger it on submit. This is how it looks like: <code>(ngSubmit)="yourFunction()"</code>.
+  - [x] In your component class, define the function and console log your friend model. Now when you submit you'll see the data appear in your console.
+  - [x] To add this friend to your friendlist server, we'll need to make a service for it. We'll use the cli for this and input the command <code>ng g s addFriend</code>. This means, a"ng"ular "g"enerate "s"ervice with name "addFriendService", when you generate a service you'll see that after the name you've given it will automatically add "Service" after it.
+  - [x] In your newly generated addFriend.service.ts file, import the HttpClient. In your addFriend class, add a new private property called http to the constructor. Typehint it to be of type HttpClient.
+  - [x] You'll also have to import the HttpClientModule in your app.module.ts, also add it to the imports array below.
 - [ ] We now have our data on submit and we're in a position to start http requests. Now we want to post our data to a server.
   - [ ] In the service, make a method called addFriend and give it a parameter, typehint it to be of the Friend type. You'll also need to import Friend.
   - [ ] In this method, write a post request. It looks like this: <code>this.http.post<any>(url, data)</code>. Return it afterwards, what you'll get back in something called an observable. http is the property HttpClient, <any> is the type of data your post can contain and url is the url you're sending the data to.
