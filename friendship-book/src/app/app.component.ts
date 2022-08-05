@@ -13,4 +13,7 @@ import {Friend} from "./friend";
 export class AppComponent {
   languageArray = ['PHP', 'CSS', 'HTML', 'Javascript', 'C++', 'C#', 'Español', 'Java', 'Si++, the Spanish C++'];
   friend = new Friend(null, null, null, null, null);
+  submitForm () {
+    console.log(this.friend);
+  }
 }

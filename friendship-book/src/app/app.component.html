@@ -10,7 +10,7 @@
 <body>
 {{ friend | json }}
 <!-- Might replace the form by an angular form -->
-<form #friendForm="ngForm">
+<form #friendForm="ngForm" (ngSubmit)="submitForm()">
   <input required type ="text" placeholder ="First name:" name="firstName"
          #firstName="ngModel" ngModel [(ngModel)]="friend.firstName"
          [class.wrongInput]="firstName.invalid && firstName.touched"
@@ -44,8 +44,8 @@
     </option>
   </select>
   <div *ngIf="favouriteLanguage.invalid && favouriteLanguage.touched" class ="errorInput">Please select your favourite language</div>
+  <button type ="submit" name="submitForm" [disabled]="friendForm.form.invalid">Submit</button>
 </form>
-<button type ="button" name="submitForm" [disabled]="friendForm.form.invalid">Submit</button>
 
 </body>
 </html>
