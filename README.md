@@ -97,11 +97,11 @@ A POST request to add a friend to your friend list.
     - [x] Have no special code characters allowed anywhere if they're not needed.
     - [x] Further error displaying is optional. You could for example add a message below each field. After that you can give it a conditional class, based on if the field is valid / touched or not. The class will make it not display if the field is valid.
   - [x] To do this, add the pattern property to the input field and as a value add the regular expression that it would have to suffice. Go to https://regex101.com/ if you want to test out and learn more about regex.
-- [ ] If all the fields are valid, the forms valid property will also be set to valid. Let's disable the button when the form is not valid.
-  - [ ] To check if the form is invalid, you'll need to use <code>formName.form.invalid</code>.
-  - [ ] You can make a conditional property again by entering <code>[property]="condition"</code> in your button. Disable the button conditionally based on the invalidity of the form.
-  - [ ] Now that the form validation is set up, add the "novalidate" property to your form to prevent the automatic browser validation.
-  - [ ] To see if your button is actually getting disabled, inspect your button HTML in the browser.
+- [x] If all the fields are valid, the forms valid property will also be set to valid. Let's disable the button when the form is not valid.
+  - [x] To check if the form is invalid, you'll need to use <code>formName.form.invalid</code>.
+  - [x] You can make a conditional property again by entering <code>[property]="condition"</code> in your button. Disable the button conditionally based on the invalidity of the form.
+  - [x] Now that the form validation is set up, add the "novalidate" property to your form to prevent the automatic browser validation.
+  - [x] To see if your button is actually getting disabled, inspect your button HTML in the browser.
 - [ ] Let's submit the data to a server now, but before we can do that we need to be able to do something on submit and get access to http requests.
   - [ ] If you add the ngSubmit property to your form, you can bind a function to it and use that function in your component class to trigger it on submit. This is how it looks like: <code>(ngSubmit)="yourFunction()"</code>.
   - [ ] In your component class, define the function and console log your friend model. Now when you submit you'll see the data appear in your console.
@@ -188,8 +188,24 @@ It is a string of text that lets you create patterns that help match, locate and
 Basically, it's a piece of code that defines a pattern.
 That pattern is something you'd either like to filter in or out.
 
+## Thoughts on Frameworks
+Like almost everything in IT or life in general, the first steps are always the hardest ones.
+Getting started and adapting to using a framework is pretty rough.
+But it gets better and easier as time goes on.
+
+What I really want to discover while working with Angular is knowing what advantages it can give me over other frameworks.
+But for that, I need to use a lot more frameworks.
+So this is a goal I have set for myself not for this assignment, but for me in general.
+
+I'll definitely look more into frameworks and what framework is best suited for what project.
+Learning frameworks is tough, but once you master frameworks you can save a lot of time and money.
+And if there's one thing developers should be good at it's achieving the best results with as less work as possible!
+
+---
+
 ## Sources
 * [What are frameworks?](https://www.netsolutions.com/insights/what-is-a-framework-in-programming/)
 * [Components in Angular](https://angular.io/api/core/Component#description)
 * [How to use components in Angular](https://angular.io/guide/component-overview)
 * [What is regex?](https://www.computerhope.com/jargon/r/regex.htm)
+* [Valid and invalid in Angular](https://itnext.io/valid-and-invalid-in-angular-forms-61cfa3f2a0cd)
