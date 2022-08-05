@@ -10,11 +10,11 @@
 <body>
 {{ friend | json }}
 <!-- Might replace the form by an angular form -->
-<form #friendForm.form.invalid="ngForm">
+<form #friendForm="ngForm">
   <input required type ="text" placeholder ="First name:" name="firstName"
          #firstName="ngModel" ngModel [(ngModel)]="friend.firstName"
          [class.wrongInput]="firstName.invalid && firstName.touched"
-         pattern="[a-zA-Z ]+">
+         pattern="[a-zA-Z ]+" formnovalidate>
   <div *ngIf="firstName.invalid && firstName.touched" class ="errorInput">First name is invalid</div>
 
   <input required type ="text" placeholder ="Last name:" name="lastName"
@@ -34,6 +34,7 @@
          pattern="^(((\+|00)32[ ]?(?:\(0\)[ ]?)?)|0){1}(4(60|[789]\d)\/?(\s?\d{2}\.?){2}(\s?\d{2})|(\d\/?\s?\d{3}|\d{2}\/?\s?\d{2})(\.?\s?\d{2}){2})$"
          [class.wrongInput]="phoneNumber.invalid && phoneNumber.touched">
   <div *ngIf="phoneNumber.invalid && phoneNumber.touched" class ="errorInput">Phone number name is invalid</div>
+
   <label for="favouriteLanguage">My favourite language is:</label>
   <select required name="favouriteLanguage" id="favouriteLanguage"
           #favouriteLanguage="ngModel" ngModel [(ngModel)]="friend.favouriteLanguage"
@@ -44,7 +45,7 @@
   </select>
   <div *ngIf="favouriteLanguage.invalid && favouriteLanguage.touched" class ="errorInput">Please select your favourite language</div>
 </form>
-<button type ="button" name="submitForm">Submit</button>
+<button type ="button" name="submitForm" [disabled]="friendForm.form.invalid">Submit</button>
 
 </body>
 </html>
