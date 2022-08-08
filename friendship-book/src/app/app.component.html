@@ -47,5 +47,7 @@
   <button type ="submit" name="submitForm" [disabled]="friendForm.form.invalid">Submit</button>
 </form>
 
+<div *ngFor="let friend of allFriends">{{ friend.firstName }}, {{ friend.lastName }}, {{ friend.email }}, {{ friend.phoneNumber }},{{ friend.favouriteLanguage }}</div>
+
 </body>
 </html>

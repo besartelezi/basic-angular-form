@@ -43,5 +43,4 @@ export class AppComponent implements OnInit{
   ngOnInit(): any {
     this.getFriendsOnLoad('http://localhost:9500/allfriends');
   }
-
 }
