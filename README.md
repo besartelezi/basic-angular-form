@@ -136,10 +136,10 @@ A POST request to add a friend to your friend list.
   - [x] To make something happen on pageload, in the class add <code>ngOnInit(): any { something happens }</code>. In here, call your fetch function like we did previously for the form submit.
   - [x] We now have our friend list updated in the property allFriends of the component class.
   - [x] To check if you have your friends data console log it.
-- [ ] Now we can display the friends in the template using the property allFriends.
-  - [ ]  To do this we'll use the ngFor loop, add the following code to a div: <code>*ngFor="let friend of allFriends"</code>.
-  - [ ] In this div, if you enter {{ friend.email }} for example. You'll see that on your page you'll see all the emails of your friends displayed.
-  - [ ] Now display all details of your friends, try adding new friends in the process. It updates instantly!
+- [x] Now we can display the friends in the template using the property allFriends.
+  - [x]  To do this we'll use the ngFor loop, add the following code to a div: <code>*ngFor="let friend of allFriends"</code>.
+  - [x] In this div, if you enter {{ friend.email }} for example. You'll see that on your page you'll see all the emails of your friends displayed.
+  - [x] Now display all details of your friends, try adding new friends in the process. It updates instantly!
 - [ ]  You now have all the must-have features. Congratulations! If you have time left, be sure to take a look at the nice-to-have features. Here are some suggestions as well:
 - [ ] Try removing people from your friend list based on email. Post the email of a friend, find the friend on the server and pop it out of the array.
 - [ ] Try updating the data from a friend based on email. Same thing, post the email and find that friend, update the values. 
