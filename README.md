@@ -125,25 +125,26 @@ A POST request to add a friend to your friend list.
   - [x] Remember the url that we left empty? It's time to configure a path to which we'll post our data. Start by changing the url to <code>'http://localhost:PORT/'</code>. 
   - [x] Next, make a new post function with path "addFriend". In here, push the request body to the allFriends array.
   - [x] If you now go to your form and add a friend, submit the form, you'll see in your server, localhost:PORT/allFriends, that the friend has been added to the list.
-- [ ] You've sent data, but now we also want to display the newly updated friend list on your page. To do this, we'll have to make a get request to the server.
-  - [ ] We want to do this get request in 2 different cases, one is when the page loads and the other is when we post data to the server.
-  - [ ] First, let's write the function itself and later call the function when we need it. Make a new public async function in the component and pass the url as a parameter. Typehint the parameter and the function. The function will return a Promise of type any. A typehint of a promise with type looks like this: <code>Promise<any></code>.
-  - [ ] Then, add a fetch to the function and return and await it. The method should be get and the headers should be <code>'Content-Type': 'application/json'</code>.
-  - [ ] Add a property to your component class called allFriends and in the fetch where you can access the fetched data, assign the value of the data to that property.
-  - [ ] We now have our fetch working, let's call it when we submit the form first. To do this in the success part of the subscribe, call the function with url 'http://localhost:PORT/allFriends'.
-  - [ ] To do it on page load, import OnInit. Next your AppComponent class has to implement it.
-  - [ ] To make something happen on pageload, in the class add <code>ngOnInit(): any { something happens }</code>. In here, call your fetch function like we did previously for the form submit.
-  - [ ] We now have our friend list updated in the property allFriends of the component class.
-  - [ ] To check if you have your friends data console log it.
+- [x] You've sent data, but now we also want to display the newly updated friend list on your page. To do this, we'll have to make a get request to the server.
+  - [x] We want to do this get request in 2 different cases, one is when the page loads and the other is when we post data to the server.
+  - [x] First, let's write the function itself and later call the function when we need it. Make a new public async function in the component and pass the url as a parameter. Typehint the parameter and the function. The function will return a Promise of type any. A typehint of a promise with type looks like this: <code>Promise<any></code>.
+  - [x] Then, add a fetch to the function and return and await it. The method should be get and the headers should be <code>'Content-Type': 'application/json'</code>.
+    - [x] Add the return
+  - [x] Add a property to your component class called allFriends and in the fetch where you can access the fetched data, assign the value of the data to that property.
+  - [x] We now have our fetch working, let's call it when we submit the form first. To do this in the success part of the subscribe, call the function with url 'http://localhost:PORT/allFriends'.
+  - [x] To do it on page load, import OnInit. Next your AppComponent class has to implement it.
+  - [x] To make something happen on pageload, in the class add <code>ngOnInit(): any { something happens }</code>. In here, call your fetch function like we did previously for the form submit.
+  - [x] We now have our friend list updated in the property allFriends of the component class.
+  - [x] To check if you have your friends data console log it.
 - [ ] Now we can display the friends in the template using the property allFriends.
   - [ ]  To do this we'll use the ngFor loop, add the following code to a div: <code>*ngFor="let friend of allFriends"</code>.
   - [ ] In this div, if you enter {{ friend.email }} for example. You'll see that on your page you'll see all the emails of your friends displayed.
   - [ ] Now display all details of your friends, try adding new friends in the process. It updates instantly!
 - [ ]  You now have all the must-have features. Congratulations! If you have time left, be sure to take a look at the nice-to-have features. Here are some suggestions as well:
-  - [ ] Try removing people from your friend list based on email. Post the email of a friend, find the friend on the server and pop it out of the array.
-  - [ ] Try updating the data from a friend based on email. Same thing, post the email and find that friend, update the values. 
-  - [ ] Make separate pages by generating new components! You'll have to look into routing as well!
-  - [ ] Get creative!
+- [ ] Try removing people from your friend list based on email. Post the email of a friend, find the friend on the server and pop it out of the array.
+- [ ] Try updating the data from a friend based on email. Same thing, post the email and find that friend, update the values. 
+- [ ] Make separate pages by generating new components! You'll have to look into routing as well!
+- [ ] Get creative!
 - [ ] Congratulations, you survived the first steps of Angular and Node. I'm proud of you!
 
 ---
@@ -193,13 +194,44 @@ Like almost everything in IT or life in general, the first steps are always the 
 Getting started and adapting to using a framework is pretty rough.
 But it gets better and easier as time goes on.
 
-What I really want to discover while working with Angular is knowing what advantages it can give me over other frameworks.
+What I really want to discover while working with Angular is being aware of what advantages it can give me over other frameworks.
 But for that, I need to use a lot more frameworks.
 So this is a goal I have set for myself not for this assignment, but for me in general.
 
 I'll definitely look more into frameworks and what framework is best suited for what project.
 Learning frameworks is tough, but once you master frameworks you can save a lot of time and money.
 And if there's one thing developers should be good at it's achieving the best results with as less work as possible!
+
+## Bug-Catcher Besart Is On The Case!
+There's a weird bug going on right now on my website.
+It goes as follows:
+* Console logging the allFriends array on pageload works, but it returns an empty array
+* When submitting the form, it console logs the allFriends array. It won't show the newly added friend, only the previous ones.
+  * So for example, I just added a new friend called Boris through the form. When clicking send, the console log appears and it wont show Boris.
+  * I then add a new friend called Bart-Smit. I do the same as with Boris, now Bart-Smit won't appear.
+  * When I refresh the page, the console log will show an empty array again.
+  * When filling in the form after I refreshed the page, and adding a new friend called 'Johnny Longlegs', then the first friend, Boris, and Bart-Smit will appear!
+* Ultimately, there is an issue with both the refresh page not console logging the array properly AND when submitting the form, but the refresh page is the biggest issue as of now.
+  * The submit form is bugged, but it works. The refresh page is not working at all.
+
+So I'll start by making the refresh page work, when the page is refreshed then all the friends need to be visible in the console log of the allFriends array.
+
+I was able to fix the issue.
+I added the console log to the async function itself, not to the submitForm function.
+The moment the form gets submitted, the new friend hasn't been added to the server yet.
+That was the problem.
+
+## Final Thoughts
+All in all, I'm somewhat underwhelmed at how this assignment went for me.
+I was stuck in a lot of parts throughout the assignment.
+The speed at how I was learning was a bit slower than usual.
+
+I think the main issue was that learning to use frameworks the first time is just a very challenging thing to do.
+The upside is that because I struggled so much I'm sure that the next time I'll work with Angular it will go way more smoothly.
+In general, working on the back-end is a lot harder for me than working on the front-end.
+My goal is to eventually start working as a full-stack developer, so this was a good wake-up call that I'll have to polish my back-end skills a lot more.
+
+I may not have finished this assignment perfectly, but I did make some picture-perfect mistakes that I have learned a lot from.
 
 ---
 
